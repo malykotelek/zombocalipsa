@@ -1,0 +1,32 @@
+Zombocalipsa - Copyright (C) 2026 Malykotelek
+
+-------------------------------------------------------------------------------
+CODEBASE LICENSE:
+-------------------------------------------------------------------------------
+The source code of this project is licensed under the GNU General Public 
+License v3.0 (GPLv3). 
+
+This means:
+- You may copy, distribute, and modify the code.
+- If you use this code in your project, your project MUST also be open-source 
+  under the same GPLv3 license.
+- You must include the original copyright notice.
+
+Full license text can be found at: https://www.gnu.org/licenses/gpl-3.0.html
+
+-------------------------------------------------------------------------------
+ASSETS LICENSE:
+-------------------------------------------------------------------------------
+ALL RIGHTS RESERVED. 
+
+All visual assets (sprites, textures, animations, UI), audio files (music, 
+sound effects), and original character designs are the exclusive property 
+of Malykotelek.
+
+You ARE NOT permitted to:
+- Use, copy, or redistribute these assets in your own games or projects.
+- Modify these assets for any purpose.
+- Use these assets for any commercial gain.
+
+Commercial use of any part of this project (code or assets) without 
+explicit written permission from the author is strictly prohibited.
