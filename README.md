@@ -9,4 +9,5 @@ Game
 
 # Third-Party Assets
 
-- **Font:** The game uses the "Eater" font, designed by Typomondo. This Font Software is licensed under the [SIL Open Font License, Version 1.1](https://openfontlicense.org).
+**Font:** The game uses the "Eater" font, designed by Typomondo. This Font Software is licensed under the [SIL Open Font License, Version 1.1](https://openfontlicense.org).
+**Font:** The game uses the "Nosifer" font, designed by Typomondo. This Font Software is licensed under the [SIL Open Font License, Version 1.1](https://openfontlicense.org).
