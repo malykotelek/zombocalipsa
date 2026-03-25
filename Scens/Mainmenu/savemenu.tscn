@@ -1,7 +1,33 @@
-[gd_scene load_steps=3 format=3 uid="uid://b0ujo2pttvk3s"]
+[gd_scene load_steps=13 format=3 uid="uid://b0ujo2pttvk3s"]
 
 [ext_resource type="Script" uid="uid://dghj7wk64oxko" path="res://scripts/Mainmenu/savemenu.gd" id="1_30alm"]
 [ext_resource type="FontFile" uid="uid://dgf12oilsdf15" path="res://assets/Fonts/Eater/Eater-Regular.ttf" id="2_eedl5"]
+[ext_resource type="FontFile" uid="uid://b5yd2nixglf4h" path="res://assets/Fonts/Joti_One/JotiOne-Regular.ttf" id="3_pjd46"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pjd46"]
+bg_color = Color(0.0807833, 0.0807834, 0.0807832, 1)
+border_width_left = 2
+border_width_top = 2
+border_width_right = 2
+border_width_bottom = 2
+border_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+border_blend = true
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7c7sh"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_1en0s"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_c60qe"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_3qjba"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_pjd46"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_4e130"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ipldk"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kxoku"]
 
 [node name="Savemenu" type="Control"]
 layout_mode = 3
@@ -34,6 +60,7 @@ offset_right = 140.5
 offset_bottom = 46.5
 grow_horizontal = 2
 grow_vertical = 2
+theme_override_constants/separation = 10
 
 [node name="Label" type="RichTextLabel" parent="VBoxContainer"]
 custom_minimum_size = Vector2(800, 200)
@@ -55,19 +82,313 @@ vertical_alignment = 1
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+theme_override_constants/separation = 50
 
-[node name="Saveslot1" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="SaveSlot1" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 350)
 layout_mode = 2
-text = "Save Slot 1"
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_pjd46")
 
-[node name="Saveslot2" type="Button" parent="VBoxContainer/HBoxContainer"]
-layout_mode = 2
-text = "Save Slot 2"
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/SaveSlot1"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+metadata/_edit_use_anchors_ = true
 
-[node name="Saveslot3" type="Button" parent="VBoxContainer/HBoxContainer"]
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer/SaveSlot1/VBoxContainer"]
 layout_mode = 2
-text = "Save Slot 3"
+
+[node name="WorldNameLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot1/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Name World"
+
+[node name="MapLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot1/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Map : Story World"
+
+[node name="LevelLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot1/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Player Level : 5"
+
+[node name="TimeLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot1/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Time in the World : 1:57 h"
+
+[node name="LastEntryLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot1/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Last entry : 21:37
+25.03.2026"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/SaveSlot1/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_colors/font_hover_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/icon_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7c7sh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1en0s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c60qe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3qjba")
+text = "Delete Save"
+
+[node name="SaveSlot2" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 350)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_pjd46")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/SaveSlot2"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer/SaveSlot2/VBoxContainer"]
+layout_mode = 2
+
+[node name="WorldNameLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Name World"
+
+[node name="MapLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Map : Story World"
+
+[node name="LevelLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Player Level : 5"
+
+[node name="TimeLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Time in the World : 1:57 h"
+
+[node name="LastEntryLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Last entry : 21:37
+25.03.2026"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/SaveSlot2/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_colors/font_hover_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/icon_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7c7sh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1en0s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c60qe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3qjba")
+text = "Delete Save"
+
+[node name="SaveSlot3" type="Button" parent="VBoxContainer/HBoxContainer"]
+custom_minimum_size = Vector2(250, 350)
+layout_mode = 2
+focus_mode = 0
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 36
+theme_override_styles/normal = SubResource("StyleBoxFlat_pjd46")
+
+[node name="VBoxContainer" type="VBoxContainer" parent="VBoxContainer/HBoxContainer/SaveSlot3"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 25
+metadata/_edit_use_anchors_ = true
+
+[node name="Control" type="Control" parent="VBoxContainer/HBoxContainer/SaveSlot3/VBoxContainer"]
+layout_mode = 2
+
+[node name="WorldNameLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot3/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Name World"
+
+[node name="MapLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot3/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Map : Story World"
+
+[node name="LevelLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot3/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Player Level : 5"
+
+[node name="TimeLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot3/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Time in the World : 1:57 h"
+
+[node name="LastEntryLabel" type="Label" parent="VBoxContainer/HBoxContainer/SaveSlot3/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0.333333, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 18
+text = "Last entry : 21:37
+25.03.2026"
+horizontal_alignment = 1
+
+[node name="Button" type="Button" parent="VBoxContainer/HBoxContainer/SaveSlot3/VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+focus_mode = 0
+theme_override_colors/font_hover_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/icon_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 20
+theme_override_styles/focus = SubResource("StyleBoxEmpty_7c7sh")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_1en0s")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_c60qe")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_3qjba")
+text = "Delete Save"
 
 [node name="BackButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/icon_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("3_pjd46")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_pjd46")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_4e130")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ipldk")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_kxoku")
 text = "Back"

@@ -1,13 +1,14 @@
-[gd_scene load_steps=5 format=3 uid="uid://bwtjbvtnnb17v"]
+[gd_scene load_steps=7 format=3 uid="uid://bwtjbvtnnb17v"]
 
 [ext_resource type="FontFile" uid="uid://dgf12oilsdf15" path="res://assets/Fonts/Eater/Eater-Regular.ttf" id="1_g0lxk"]
 [ext_resource type="Script" uid="uid://c0tpmylidexh6" path="res://scripts/Mainmenu/mainmenu.gd" id="1_kutos"]
-[ext_resource type="FontFile" uid="uid://brsdqy42e8yr7" path="res://assets/Fonts/Nosifer/Nosifer-Regular.ttf" id="2_uocu2"]
+[ext_resource type="FontFile" uid="uid://b5yd2nixglf4h" path="res://assets/Fonts/Joti_One/JotiOne-Regular.ttf" id="3_kutos"]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_uocu2"]
-bg_color = Color(0.6, 0.6, 0.6, 0)
-shadow_size = 4
-shadow_offset = Vector2(0, 5)
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_kutos"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_7nik2"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_ptvjv"]
 
 [node name="Mainmenu" type="Control"]
 layout_mode = 3
@@ -64,25 +65,37 @@ theme_override_constants/separation = 25
 [node name="Play_Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_mode = 0
 theme_override_colors/font_hover_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/icon_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0.372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_uocu2")
-theme_override_font_sizes/font_size = 32
-theme_override_styles/hover = SubResource("StyleBoxFlat_uocu2")
+theme_override_fonts/font = ExtResource("3_kutos")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kutos")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7nik2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ptvjv")
 text = "Play"
 
 [node name="Option_Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+focus_mode = 0
 theme_override_colors/font_hover_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/icon_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0.372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_uocu2")
-theme_override_font_sizes/font_size = 32
-theme_override_styles/hover = SubResource("StyleBoxFlat_uocu2")
+theme_override_fonts/font = ExtResource("3_kutos")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kutos")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7nik2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ptvjv")
 text = "Option
 "
 
@@ -90,13 +103,19 @@ text = "Option
 layout_mode = 2
 size_flags_horizontal = 4
 size_flags_vertical = 4
+focus_mode = 0
 theme_override_colors/font_hover_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/icon_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
 theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
 theme_override_colors/font_color = Color(0, 0.372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
 theme_override_constants/outline_size = 5
-theme_override_fonts/font = ExtResource("2_uocu2")
-theme_override_font_sizes/font_size = 32
-theme_override_styles/hover = SubResource("StyleBoxFlat_uocu2")
+theme_override_fonts/font = ExtResource("3_kutos")
+theme_override_font_sizes/font_size = 42
+theme_override_styles/focus = SubResource("StyleBoxEmpty_kutos")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_7nik2")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_ptvjv")
 text = "Quit"
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Play_Button" to="." method="_on_play_button_pressed"]
