@@ -14,6 +14,10 @@ config/name="Zombocalipsa"
 run/main_scene="uid://bwtjbvtnnb17v"
 config/features=PackedStringArray("4.4", "Forward Plus")
 
+[autoload]
+
+SaveManager="*res://scripts/Savescripts/SaveManager.gd"
+
 [editor_plugins]
 
 enabled=PackedStringArray("res://addons/godot_super-wakatime/plugin.cfg")

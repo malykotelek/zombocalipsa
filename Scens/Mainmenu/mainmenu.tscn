@@ -79,6 +79,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_kutos")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_7nik2")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ptvjv")
 text = "Play"
+flat = true
 
 [node name="Option_Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -98,6 +99,7 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_7nik2")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ptvjv")
 text = "Option
 "
+flat = true
 
 [node name="Quit_Button" type="Button" parent="MarginContainer/VBoxContainer/VBoxContainer"]
 layout_mode = 2
@@ -117,6 +119,7 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_kutos")
 theme_override_styles/hover = SubResource("StyleBoxEmpty_7nik2")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_ptvjv")
 text = "Quit"
+flat = true
 
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Play_Button" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="MarginContainer/VBoxContainer/VBoxContainer/Option_Button" to="." method="_on_option_button_pressed"]
