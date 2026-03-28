@@ -50,7 +50,7 @@ func _on_save_slot_pressed(index: int) -> void:
 
 func _on_new_game_pressed(index: int) -> void:
 	SaveManager.current_slot = index
-	get_tree().change_scene_to_file(Game_Path)
+	get_tree().change_scene_to_file("res://Scens/Mainmenu/worldcreator.tscn")
 
 func _on_delete_pressed(index: int) -> void:
 	slot_to_delete = index

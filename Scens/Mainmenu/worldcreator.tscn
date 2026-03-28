@@ -1,0 +1,184 @@
+[gd_scene load_steps=8 format=3 uid="uid://g35sm0dm0vr1"]
+
+[ext_resource type="FontFile" uid="uid://dgf12oilsdf15" path="res://assets/Fonts/Eater/Eater-Regular.ttf" id="1_1du36"]
+[ext_resource type="Script" uid="uid://d0r0dt1lnenu0" path="res://scripts/Savescripts/worldcreator.gd" id="1_w80st"]
+[ext_resource type="FontFile" uid="uid://b5yd2nixglf4h" path="res://assets/Fonts/Joti_One/JotiOne-Regular.ttf" id="2_w80st"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_78f8w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uq18p"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_r208f"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_b7vmj"]
+
+[node name="WorldCreator" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_w80st")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.101961, 0.101961, 0.101961, 1)
+
+[node name="VBoxContainer" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -140.5
+offset_top = -46.5
+offset_right = 140.5
+offset_bottom = 46.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 10
+
+[node name="Label" type="RichTextLabel" parent="VBoxContainer"]
+custom_minimum_size = Vector2(800, 200)
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_constants/shadow_offset_x = 4
+theme_override_fonts/normal_font = ExtResource("1_1du36")
+theme_override_font_sizes/normal_font_size = 70
+bbcode_enabled = true
+text = "[wave amp=20.0 freq=3.0 connected=1][color=#420505]World Builder[/color][/wave]"
+fit_content = true
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="GridContainer" type="GridContainer" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_constants/v_separation = 20
+columns = 2
+
+[node name="Label" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_color = Color(0, 0.372549, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_w80st")
+theme_override_font_sizes/font_size = 20
+text = "Name of the World :"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="LineEdit" type="LineEdit" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_w80st")
+theme_override_font_sizes/font_size = 20
+text = "Enter the Name "
+alignment = 1
+max_length = 20
+
+[node name="Label2" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.372549, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_w80st")
+theme_override_font_sizes/font_size = 20
+text = "Select a map :"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="OptionButton" type="OptionButton" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_w80st")
+theme_override_font_sizes/font_size = 20
+alignment = 1
+selected = 0
+item_count = 2
+popup/item_0/text = "Storyworld"
+popup/item_0/id = 0
+popup/item_1/text = "Randomly Generated (Coming Soon)"
+popup/item_1/id = 1
+
+[node name="Label3" type="Label" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0.372549, 0, 1)
+theme_override_colors/font_shadow_color = Color(0, 0, 0, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_w80st")
+theme_override_font_sizes/font_size = 20
+text = "Difficulty level :"
+horizontal_alignment = 2
+vertical_alignment = 1
+
+[node name="OptionButton2" type="OptionButton" parent="VBoxContainer/GridContainer"]
+layout_mode = 2
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_constants/outline_size = 6
+theme_override_fonts/font = ExtResource("2_w80st")
+theme_override_font_sizes/font_size = 20
+alignment = 1
+selected = 1
+item_count = 3
+popup/item_0/text = "Easy"
+popup/item_0/id = 0
+popup/item_1/text = "Medium"
+popup/item_1/id = 1
+popup/item_2/text = "Hard"
+popup/item_2/id = 2
+
+[node name="CreateButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/icon_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_w80st")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78f8w")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_uq18p")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r208f")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_b7vmj")
+text = "Create World
+"
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
+
+[node name="BackButton" type="Button" parent="VBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/icon_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_w80st")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_78f8w")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_uq18p")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_r208f")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_b7vmj")
+text = "Back"
