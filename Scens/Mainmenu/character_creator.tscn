@@ -1,16 +1,9 @@
-[gd_scene load_steps=12 format=3 uid="uid://c8kt8d6clgx26"]
+[gd_scene load_steps=13 format=3 uid="uid://c8kt8d6clgx26"]
 
+[ext_resource type="Script" uid="uid://dqsoqnfax2xto" path="res://Scens/Mainmenu/character_creator.gd" id="1_18u2j"]
 [ext_resource type="FontFile" uid="uid://dgf12oilsdf15" path="res://assets/Fonts/Eater/Eater-Regular.ttf" id="1_th43y"]
 [ext_resource type="FontFile" uid="uid://b5yd2nixglf4h" path="res://assets/Fonts/Joti_One/JotiOne-Regular.ttf" id="2_rdfsc"]
 [ext_resource type="Theme" uid="uid://4lifychfrhfo" path="res://assets/Theme/OptionButton.tres" id="3_rdfsc"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rdfsc"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k04il"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jtdvq"]
-
-[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dogle"]
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_18u2j"]
 
@@ -20,6 +13,14 @@
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_yjwlp"]
 
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rdfsc"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k04il"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jtdvq"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_dogle"]
+
 [node name="CharacterCreator" type="Control"]
 layout_mode = 3
 anchors_preset = 15
@@ -27,6 +28,7 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_18u2j")
 
 [node name="ColorRect" type="ColorRect" parent="."]
 layout_mode = 1
@@ -50,7 +52,7 @@ offset_right = 140.5
 offset_bottom = 46.5
 grow_horizontal = 2
 grow_vertical = 2
-theme_override_constants/separation = 10
+theme_override_constants/separation = 15
 
 [node name="Label" type="RichTextLabel" parent="VBoxContainer"]
 custom_minimum_size = Vector2(800, 200)
@@ -71,25 +73,56 @@ vertical_alignment = 1
 [node name="MainHBoxContainer" type="HBoxContainer" parent="VBoxContainer"]
 layout_mode = 2
 size_flags_horizontal = 4
+theme_override_constants/separation = 25
 
 [node name="PortraitHBoxContainer" type="HBoxContainer" parent="VBoxContainer/MainHBoxContainer"]
 layout_mode = 2
 
-[node name="Button" type="Button" parent="VBoxContainer/MainHBoxContainer/PortraitHBoxContainer"]
+[node name="leftButton" type="Button" parent="VBoxContainer/MainHBoxContainer/PortraitHBoxContainer"]
 layout_mode = 2
-text = "<-"
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/icon_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_rdfsc")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_18u2j")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kk75m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wo383")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yjwlp")
+text = "<"
 
 [node name="TextureRect" type="TextureRect" parent="VBoxContainer/MainHBoxContainer/PortraitHBoxContainer"]
 layout_mode = 2
 expand_mode = 1
 stretch_mode = 4
 
-[node name="Button2" type="Button" parent="VBoxContainer/MainHBoxContainer/PortraitHBoxContainer"]
+[node name="rightButton" type="Button" parent="VBoxContainer/MainHBoxContainer/PortraitHBoxContainer"]
 layout_mode = 2
-text = "->"
+size_flags_horizontal = 4
+theme_override_colors/font_hover_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/icon_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_outline_color = Color(0, 0, 0, 1)
+theme_override_colors/font_color = Color(0, 0.372549, 0, 1)
+theme_override_colors/font_focus_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_colors/font_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+theme_override_constants/outline_size = 5
+theme_override_fonts/font = ExtResource("2_rdfsc")
+theme_override_font_sizes/font_size = 32
+theme_override_styles/focus = SubResource("StyleBoxEmpty_18u2j")
+theme_override_styles/hover = SubResource("StyleBoxEmpty_kk75m")
+theme_override_styles/pressed = SubResource("StyleBoxEmpty_wo383")
+theme_override_styles/normal = SubResource("StyleBoxEmpty_yjwlp")
+text = ">"
 
 [node name="GridContainer" type="GridContainer" parent="VBoxContainer/MainHBoxContainer"]
 layout_mode = 2
+theme_override_constants/h_separation = 10
+theme_override_constants/v_separation = 15
 columns = 2
 
 [node name="FirstNameLabel" type="Label" parent="VBoxContainer/MainHBoxContainer/GridContainer"]
@@ -182,6 +215,9 @@ theme_override_styles/hover = SubResource("StyleBoxEmpty_kk75m")
 theme_override_styles/pressed = SubResource("StyleBoxEmpty_wo383")
 theme_override_styles/normal = SubResource("StyleBoxEmpty_yjwlp")
 text = "Create Character"
+
+[node name="Control" type="Control" parent="VBoxContainer"]
+layout_mode = 2
 
 [node name="BackButton" type="Button" parent="VBoxContainer"]
 layout_mode = 2
