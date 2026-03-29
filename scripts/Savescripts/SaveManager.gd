@@ -2,6 +2,7 @@ extends Node
 
 const SAVE_DIR = "user://saves/"
 var current_slot: int = 0
+var temp_game_data: Dictionary = {}
 
 func _ready() -> void:
 	if not DirAccess.dir_exists_absolute(SAVE_DIR):

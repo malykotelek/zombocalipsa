@@ -18,6 +18,14 @@ func _on_create_pressed() -> void:
 	
 	var map_id := map_option.selected
 	var difficluty_id := difficulty_option.selected
+	
+	SaveManager.temp_game_data = {
+		"world_name" : world_name,
+		"map_id" : map_id,
+		"difficluty_id" : difficluty_id
+	}
+	
+	get_tree().change_scene_to_file("res://Scens/Mainmenu/character_creator.tscn")
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scens/Mainmenu/savemenu.tscn")

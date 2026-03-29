@@ -1,0 +1,40 @@
+[gd_resource type="Theme" load_steps=10 format=3 uid="uid://4lifychfrhfo"]
+
+[ext_resource type="FontFile" uid="uid://b5yd2nixglf4h" path="res://assets/Fonts/Joti_One/JotiOne-Regular.ttf" id="1_3j6rx"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_k7wyu"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_uen85"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rvx6n"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_36u4b"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_w80st"]
+
+[sub_resource type="ImageTexture" id="ImageTexture_78f8w"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_w80st"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_w80st"]
+bg_color = Color(0.101961, 0.101961, 0.101961, 1)
+
+[resource]
+OptionButton/colors/font_focus_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+OptionButton/colors/font_hover_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+OptionButton/colors/font_hover_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+OptionButton/colors/font_pressed_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+OptionButton/styles/focus = SubResource("StyleBoxEmpty_k7wyu")
+OptionButton/styles/hover = SubResource("StyleBoxEmpty_uen85")
+OptionButton/styles/normal = SubResource("StyleBoxEmpty_rvx6n")
+OptionButton/styles/pressed = SubResource("StyleBoxEmpty_36u4b")
+PopupMenu/colors/font_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+PopupMenu/colors/font_hover_color = Color(0.258824, 0.0196078, 0.0196078, 1)
+PopupMenu/colors/font_outline_color = Color(0, 0, 0, 1)
+PopupMenu/constants/outline_size = 5
+PopupMenu/font_sizes/font_size = 20
+PopupMenu/fonts/font = ExtResource("1_3j6rx")
+PopupMenu/icons/radio_checked = SubResource("ImageTexture_w80st")
+PopupMenu/icons/radio_unchecked = SubResource("ImageTexture_78f8w")
+PopupMenu/styles/hover = SubResource("StyleBoxEmpty_w80st")
+PopupMenu/styles/panel = SubResource("StyleBoxFlat_w80st")
