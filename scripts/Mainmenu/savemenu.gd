@@ -12,6 +12,7 @@ var slot_to_delete: int = 0
 func _ready() -> void:
 	
 	back_button.pressed.connect(_on_back_button_pressed)
+	delete_dialog.confirmed.connect(_on_dialog_confirmed)
 	
 	var index: int = 1 
 	
@@ -26,16 +27,20 @@ func setup_slot(slot: Button, index: int, data) -> void:
 	var vbox = slot.get_node("VBoxContainer")
 	
 	var delete_btn = vbox.get_node("DeleteButton")
+
 	
 	if data:
 		vbox.show()
 		slot.text=""
 		
-		vbox.get_node("WorldNameLabel").text = str(data.get("world_name", "Nieznany Świat"))
-		vbox.get_node("MapLabel").text = "Map : %s" % str(data.get("map", "Brak Danych"))
+		var map_names = ["StoryWorld","Randomly Generated"]
+		var saved_map_id = int(data.get("map_id", 0))
+		
+		vbox.get_node("WorldNameLabel").text = str(data.get("world_name", "Unknown"))
+		vbox.get_node("MapLabel").text = "Map : %s" % map_names[saved_map_id]
 		vbox.get_node("LevelLabel").text = "Player level : %s" % str(data.get("level", "1"))
 		vbox.get_node("TimeLabel").text = "Time in the World : %s" % str(data.get("time", "00:00"))
-		vbox.get_node("LastEntryLabel").text = "Last entry : %s" % str(data.get("date", "Brak"))
+		vbox.get_node("LastEntryLabel").text = "Last entry : %s" % str(data.get("date", "None"))
 		
 		slot.pressed.connect(_on_save_slot_pressed.bind(index))
 		delete_btn.pressed.connect(_on_delete_pressed.bind(index))
@@ -54,7 +59,7 @@ func _on_new_game_pressed(index: int) -> void:
 
 func _on_delete_pressed(index: int) -> void:
 	slot_to_delete = index
-	delete_dialog.dialog_text = "Are you sure you want to delete the save file" + str(index) +"?"
+	delete_dialog.dialog_text = "Are you sure you want to delete the save file " + str(index) +"?"
 	delete_dialog.popup_centered()
 
 func _on_dialog_confirmed() -> void:

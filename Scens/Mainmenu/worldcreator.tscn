@@ -135,6 +135,7 @@ popup/item_0/text = "Storyworld"
 popup/item_0/id = 0
 popup/item_1/text = "Randomly Generated (Coming Soon)"
 popup/item_1/id = 1
+popup/item_1/disabled = true
 
 [node name="Label3" type="Label" parent="VBoxContainer/GridContainer"]
 layout_mode = 2
