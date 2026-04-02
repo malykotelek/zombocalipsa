@@ -5,6 +5,7 @@ extends Control
 @onready var difficulty_option : OptionButton = $VBoxContainer/GridContainer/OptionButton2
 @onready var create_button : Button = $VBoxContainer/CreateButton
 @onready var back_button : Button = $VBoxContainer/BackButton
+@onready var error_label: Label = %ErrorLabel
 
 func _ready():
 	create_button.pressed.connect(_on_create_pressed)
@@ -14,7 +15,10 @@ func _on_create_pressed() -> void:
 	var world_name := world_name_input.text.strip_edges()
 	
 	if world_name.is_empty():
+		error_label.text = "! Enter name of the World !"
 		return
+	
+	error_label.text = ""
 	
 	var map_id := map_option.selected
 	var difficluty_id := difficulty_option.selected

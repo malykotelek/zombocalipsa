@@ -8,6 +8,7 @@ extends Control
 @onready var last_name_input: LineEdit = %LastNameInput
 @onready var class_button: OptionButton = %ClassButton
 
+@onready var error_label: Label = %ErrorLabel
 @onready var create_button: Button = %CreateButton
 @onready var back_button: Button = %BackButton
 
@@ -87,7 +88,10 @@ func _on_create_pressed() -> void:
 	var l_name := last_name_input.text.strip_edges()
 	
 	if f_name.is_empty() or l_name.is_empty():
+		error_label.text = "! Enter first and last name !"
 		return
+	
+	error_label.text = ""
 	
 	var character_data = {
 		"first_name" : f_name,
