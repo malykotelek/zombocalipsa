@@ -31,11 +31,11 @@ func setup_slot(slot: Button, index: int, data) -> void:
 		vbox.show()
 		slot.text=""
 		
-		vbox.get_node("WorldNameLabel").text = data["world_name"]
-		vbox.get_node("MapLabel").text = "Map : %s" % data["map"]
-		vbox.get_node("LevelLabel").text = "Player level : %d" % data["level"]
-		vbox.get_node("TimeLabel").text = "Time in the World : %s" % data["time"]
-		vbox.get_node("LastEntryLabel").text = "Last entry : %s" % data["date"]
+		vbox.get_node("WorldNameLabel").text = str(data.get("world_name", "Nieznany Świat"))
+		vbox.get_node("MapLabel").text = "Map : %s" % str(data.get("map", "Brak Danych"))
+		vbox.get_node("LevelLabel").text = "Player level : %s" % str(data.get("level", "1"))
+		vbox.get_node("TimeLabel").text = "Time in the World : %s" % str(data.get("time", "00:00"))
+		vbox.get_node("LastEntryLabel").text = "Last entry : %s" % str(data.get("date", "Brak"))
 		
 		slot.pressed.connect(_on_save_slot_pressed.bind(index))
 		delete_btn.pressed.connect(_on_delete_pressed.bind(index))
