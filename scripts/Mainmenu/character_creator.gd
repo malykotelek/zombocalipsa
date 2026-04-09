@@ -104,6 +104,8 @@ func _on_create_pressed() -> void:
 	final_save_data["player"] = character_data
 	
 	SaveManager.save_game(SaveManager.current_slot, final_save_data)
+	
+	get_tree().change_scene_to_file("res://Scens/MainGame/storyworld.tscn")
 
 func _on_back_pressed() -> void:
 	get_tree().change_scene_to_file("res://Scens/Mainmenu/worldcreator.tscn")

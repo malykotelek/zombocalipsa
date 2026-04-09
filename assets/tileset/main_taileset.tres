@@ -1,0 +1,53 @@
+[gd_resource type="TileSet" load_steps=13 format=3 uid="uid://caf3mh7vos5iq"]
+
+[ext_resource type="Texture2D" uid="uid://ddilyvarnomgt" path="res://assets/map/background/grassland/Grass.png" id="1_vebg4"]
+[ext_resource type="Texture2D" uid="uid://dyjdas0abtkso" path="res://assets/map/foreground/grassland/coal_rock.png" id="2_31hny"]
+[ext_resource type="Texture2D" uid="uid://dsm2xy5tnjtb1" path="res://assets/map/foreground/grassland/iron_rock.png" id="3_sj28v"]
+[ext_resource type="Texture2D" uid="uid://bsfcj1k35vj3c" path="res://assets/map/foreground/grassland/stone_rock.png" id="4_ot1wy"]
+[ext_resource type="Texture2D" uid="uid://bxl10th6odqqt" path="res://assets/map/foreground/grassland/tree.png" id="5_hh5yg"]
+[ext_resource type="Texture2D" uid="uid://2g0pnen1t0jl" path="res://assets/map/foreground/grassland/trees.png" id="6_kgc7y"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_2n8kr"]
+texture = ExtResource("1_vebg4")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_t62iw"]
+texture = ExtResource("2_31hny")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -0.564484, 32, -0.564484, 32, 22.579, -32, 23.7079)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_8km87"]
+texture = ExtResource("3_sj28v")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -3.38684, 32, -3.38684, 32, 23.7079, -32, 24.2724)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_23ta4"]
+texture = ExtResource("4_ot1wy")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -4.51579, 32, -5.64474, 32, 20.3211, -32, 20.8855)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_27v0c"]
+texture = ExtResource("5_hh5yg")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-14.0198, -32, 20.711, -32, 20.3211, 17.4987, -12.4184, 17.4987)
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_juocc"]
+texture = ExtResource("6_kgc7y")
+texture_region_size = Vector2i(64, 64)
+0:0/0 = 0
+0:0/0/physics_layer_0/polygon_0/points = PackedVector2Array(-32, -32, 32, -32, 32, 11.854, -32, 11.854)
+
+[resource]
+tile_size = Vector2i(64, 64)
+physics_layer_0/collision_layer = 1
+sources/0 = SubResource("TileSetAtlasSource_2n8kr")
+sources/1 = SubResource("TileSetAtlasSource_t62iw")
+sources/2 = SubResource("TileSetAtlasSource_8km87")
+sources/3 = SubResource("TileSetAtlasSource_23ta4")
+sources/4 = SubResource("TileSetAtlasSource_27v0c")
+sources/5 = SubResource("TileSetAtlasSource_juocc")

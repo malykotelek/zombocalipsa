@@ -48,7 +48,6 @@ func setup_slot(slot: Button, index: int, data) -> void:
 		vbox.hide()
 		slot.text = "New Game"
 		slot.pressed.connect(_on_new_game_pressed.bind(index))
-		
 
 func _on_save_slot_pressed(index: int) -> void:
 	get_tree().change_scene_to_file(Game_Path)
